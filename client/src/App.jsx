@@ -31,7 +31,7 @@ const App = () => {
       <footer className="border-t border-slate-800/80 bg-slate-950/70">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-5 text-sm text-slate-400 lg:px-6">
           <p>Built by Thanooj</p>
-          <p className="text-slate-500">AI-assisted code review for bugs, performance, and security.</p>
+          <p className="text-slate-500">AI-assisted code review for bugs, performance and security.</p>
         </div>
       </footer>
     </div>

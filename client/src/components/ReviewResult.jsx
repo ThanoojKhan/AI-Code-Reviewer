@@ -16,7 +16,7 @@ const ReviewResult = ({ review }) => {
   if (!review) {
     return (
       <div className="rounded-3xl border border-dashed border-slate-800 bg-slate-900/50 p-8 text-sm text-slate-400">
-        Submit code to generate an AI review with bugs, performance suggestions, and security findings.
+        Submit code to generate an AI review with bugs, performance suggestions and security findings.
       </div>
     );
   }
@@ -25,7 +25,7 @@ const ReviewResult = ({ review }) => {
 
   return (
     <div className="space-y-6">
-      <section className="rounded-[2rem] border border-cyan-500/20 bg-slate-900/90 p-6 shadow-[0_24px_80px_rgba(8,145,178,0.15)]">
+      <section className="rounded-4xl border border-cyan-500/20 bg-slate-900/90 p-6 shadow-[0_24px_80px_rgba(8,145,178,0.15)]">
         <div className="mb-5 flex flex-wrap gap-3 text-xs text-slate-400">
           <span className="rounded-full border border-slate-700 px-3 py-1">{language}</span>
           <span className="rounded-full border border-slate-700 px-3 py-1">{model}</span>
@@ -50,7 +50,7 @@ const ReviewResult = ({ review }) => {
               <p className="mb-2 text-xs uppercase tracking-[0.18em] text-rose-300">
                 {item.line ? `Line ${item.line}` : 'General finding'}
               </p>
-              <p className="break-words text-sm leading-6 text-slate-200">{item.description}</p>
+              <p className="wrap-break-word text-sm leading-6 text-slate-200">{item.description}</p>
             </article>
           )}
         />
@@ -60,7 +60,7 @@ const ReviewResult = ({ review }) => {
           emptyText="No performance suggestions reported."
           renderItem={(item, index) => (
             <article key={index} className="min-w-0 rounded-2xl border border-amber-500/20 bg-amber-500/5 p-4">
-              <p className="break-words text-sm leading-6 text-slate-200">{item.suggestion}</p>
+              <p className="wrap-break-word text-sm leading-6 text-slate-200">{item.suggestion}</p>
             </article>
           )}
         />
@@ -70,7 +70,7 @@ const ReviewResult = ({ review }) => {
           emptyText="No security issues reported."
           renderItem={(item, index) => (
             <article key={index} className="min-w-0 rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-4">
-              <p className="break-words text-sm leading-6 text-slate-200">{item.issue}</p>
+              <p className="wrap-break-word text-sm leading-6 text-slate-200">{item.issue}</p>
             </article>
           )}
         />

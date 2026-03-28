@@ -55,16 +55,16 @@ const Home = () => {
 
   return (
     <div className="mx-auto max-w-7xl space-y-8 px-4 py-8 lg:px-6">
-      <section className="rounded-[2rem] border border-slate-800 bg-slate-900/80 p-6 shadow-[0_30px_100px_rgba(15,23,42,0.65)] backdrop-blur">
+      <section className="rounded-4xl border border-slate-800 bg-slate-900/80 p-6 shadow-[0_30px_100px_rgba(15,23,42,0.65)] backdrop-blur">
         <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
           <div>
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-300">AI Code Reviewer</p>
             <h1 className="text-3xl font-semibold text-white">Paste code. Ship safer.</h1>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-400">
-              Run an AI-assisted review focused on defects, performance bottlenecks, and security concerns before the code reaches production.
+              Run an AI-assisted review focused on defects, performance bottlenecks and security concerns before the code reaches production.
             </p>
           </div>
-          <div className="grid min-w-[180px] gap-3 rounded-3xl border border-slate-800 bg-slate-950/80 p-4 text-sm text-slate-400 sm:grid-cols-2 lg:grid-cols-1">
+          <div className="grid min-w-45 gap-3 rounded-3xl border border-slate-800 bg-slate-950/80 p-4 text-sm text-slate-400 sm:grid-cols-2 lg:grid-cols-1">
             <div>
               <span className="block text-xs uppercase tracking-[0.18em] text-slate-500">Characters</span>
               <strong className="text-lg text-slate-100">{stats.characters}</strong>

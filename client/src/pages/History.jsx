@@ -61,7 +61,7 @@ const History = () => {
 
   return (
     <div className="mx-auto grid max-w-7xl gap-8 px-4 py-8 lg:px-6 xl:grid-cols-[0.85fr_1.15fr]">
-      <section className="rounded-[2rem] border border-slate-800 bg-slate-900/80 p-6 shadow-[0_30px_100px_rgba(15,23,42,0.65)]">
+      <section className="rounded-4xl border border-slate-800 bg-slate-900/80 p-6 shadow-[0_30px_100px_rgba(15,23,42,0.65)]">
         <div className="mb-6 flex items-center justify-between gap-4">
           <div>
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-300">Review History</p>
@@ -113,7 +113,7 @@ const History = () => {
                       <button type="button" onClick={() => handleDelete(review._id)} className="rounded-2xl border border-rose-500/30 px-3 py-2 text-xs font-medium text-rose-200 transition hover:border-rose-400">Delete</button>
                     </div>
                   </div>
-                  <p className="max-h-[4.5rem] overflow-hidden text-sm leading-6 text-slate-400">{review.analysis?.summary || 'No summary available.'}</p>
+                  <p className="max-h-18 overflow-hidden text-sm leading-6 text-slate-400">{review.analysis?.summary || 'No summary available.'}</p>
                   <div className="mt-3 flex flex-wrap gap-2 text-xs text-slate-500">
                     <span className="rounded-full border border-slate-800 px-2 py-1">{review.totalTokens} tokens</span>
                     <span className="rounded-full border border-slate-800 px-2 py-1">${Number(review.estimatedCostUsd || 0).toFixed(6)}</span>
@@ -127,7 +127,7 @@ const History = () => {
         )}
       </section>
 
-      <section className="rounded-[2rem] border border-slate-800 bg-slate-900/80 p-6 shadow-[0_30px_100px_rgba(15,23,42,0.65)]">
+      <section className="rounded-4xl border border-slate-800 bg-slate-900/80 p-6 shadow-[0_30px_100px_rgba(15,23,42,0.65)]">
         <div className="mb-6">
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-300">Detail View</p>
           <h2 className="text-2xl font-semibold text-white">Review payload</h2>
@@ -154,11 +154,11 @@ const History = () => {
             <div className="grid gap-5 lg:grid-cols-2">
               <div className="rounded-3xl border border-slate-800 bg-slate-950/70 p-5">
                 <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">Code</h3>
-                <pre className="max-h-[420px] overflow-auto whitespace-pre-wrap text-xs leading-6 text-slate-300">{selectedReview.code}</pre>
+                <pre className="max-h-105 overflow-auto whitespace-pre-wrap text-xs leading-6 text-slate-300">{selectedReview.code}</pre>
               </div>
               <div className="rounded-3xl border border-slate-800 bg-slate-950/70 p-5">
                 <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">Analysis JSON</h3>
-                <pre className="max-h-[420px] overflow-auto text-xs leading-6 text-slate-300">{JSON.stringify(selectedReview.analysis, null, 2)}</pre>
+                <pre className="max-h-105 overflow-auto text-xs leading-6 text-slate-300">{JSON.stringify(selectedReview.analysis, null, 2)}</pre>
               </div>
             </div>
           </div>
